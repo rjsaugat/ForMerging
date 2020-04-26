@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/app';
 import 'firebase/database';
 import 'firebase/storage';
+import 'firebase/auth'
 
 
 
@@ -25,10 +26,16 @@ const firebasePromotions = firebaseDB.ref('promotions');
 const firebaseMessagesRead = firebaseDB.ref('messages'); */
 
 const firebaseMessages = firebaseDB.ref('messages');
+const firebaseGallery = firebaseDB.ref('gallery');
+const firebaseRooms = firebaseDB.ref('rooms');
+const firebaseServices = firebaseDB.ref('services');
 
 export {
     firebase,
     firebaseDB,
     firebasePromotions,
-    firebaseMessages
+    firebaseMessages,
+    firebaseGallery,
+    firebaseRooms,
+    firebaseServices
 }

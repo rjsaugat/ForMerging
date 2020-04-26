@@ -20,6 +20,10 @@ const FormField = ({id, formData, change}) => {
             case('input'):
                 formTemplate = (
                     <div>
+                        {formData.showlabel ?
+                            <div className="label_inputs">{formData.config.label}</div>
+                            :null
+                        }
                         <input 
                             {...formData.config}
                             value={formData.value}
@@ -32,12 +36,40 @@ const FormField = ({id, formData, change}) => {
             case('textarea'):
                 formTemplate = (
                     <div>
+                        {formData.showlabel ?
+                            <div className="label_inputs">{formData.config.label}</div>
+                            :null
+                        }
                         <textarea 
                             {...formData.config}
                             value={formData.value}
                             onChange={(event) => change({event, id})}
                             rows="5"
                         />
+                        {showError()}
+                    </div>
+                )
+            break;
+            case('select'):
+                formTemplate = (
+                    <div>
+                        {formData.showlabel ?
+                            <div className="label_inputs">{formData.config.label}</div>
+                            :null
+                        }
+                        <select 
+                            value={formData.value}
+                            onChange={(event) => change({event,id})}
+                        >
+                            <option value="">Select One:</option>
+                            {
+                                formData.config.options.map((item)=>(
+                                    <option key={item.key} value={item.key}>
+                                        {item.value}
+                                    </option>
+                                ))
+                            }
+                        </select>
                         {showError()}
                     </div>
                 )
