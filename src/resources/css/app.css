@@ -1,0 +1,284 @@
+:root{
+    --yellow: #c1b086 !important;
+    --green: #3da066 !important;
+    --white: #fffaff !important;
+    --blue: #0066aa !important;/*Heading-text color*/
+    --brown: #7c3f4b !important;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--white) !important;
+    font-family: 'Dancing Script', cursive !important;
+    font-family: 'Lato', sans-serif !important;
+   
+}
+h2{
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 900;
+}
+
+
+
+
+.nav-buttons{
+    margin: 10px;
+    
+}
+
+
+
+/*====================
+        CARROUSEL
+======================*/
+
+
+.carrousel_wrapper {
+    height:700px;
+       overflow: hidden;
+}
+
+.carrousel_image {
+    background-size: cover !important;
+}
+
+.main-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.main_text {
+    position: absolute;
+    font-family: 'Dancing Script', cursivef !important;
+    font-size: 50px;
+    
+    letter-spacing: 1px;
+    color:#7c3f4b;
+    ;  
+}
+
+.main_text_subtitle{
+    position: absolute;
+    color: #f59236;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-top: 15em;
+    padding: 15px;
+    text-align: center;
+}
+
+.main_text .wrapper {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+
+/* Button Main page*/
+
+.book_now_btn{
+    font-family: 'lato', sans-serif;
+    margin-top: 15em;
+}
+
+.book_now_btn button{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+footer.footer-component{
+    display: flex;
+    background-color: #bcbdc0;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--blue)
+}
+
+footer.footer-component .row{
+    width: 100%;
+}
+
+.footer-component .middle, .footer-component .left, .footer-component .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer-email, .footer-phone{
+    text-decoration: none;
+    color: var(--blue)
+}
+
+
+/* footer div.left, footer div.middle, footer div.right{
+    padding: 0 20px;
+    margin: 0 auto;
+} */
+
+.footer-address p{
+    margin: 0;
+    font-size: .9em;
+    line-height: 1.8em;
+}
+
+.footer-address p span{
+    display: block;
+}
+
+.footer-icons{
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.social-link {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    list-style: none;
+}
+
+.social-link li {
+    float: left;
+    margin-right: 8px;
+    padding: 5px;
+}
+
+.footer_newsletter{
+    text-align: center;
+}
+
+/* ----------Contact------------- */
+.contact{
+    height: 700px;
+    margin: 5px;
+    padding: 5px;
+    
+}
+
+.contact-header{
+    text-align: center;
+    padding-top: 50px ;
+    margin: 0 auto;
+    font-weight: 800;
+    color: var(--blue);
+}
+/* ----------Contact------------- */
+
+/* about section */
+.about-container{
+    padding: 50px 0;
+}
+
+.about-heading{
+    color: var(--blue);
+    font-weight: 800;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.abt-line{
+    height: 15px;
+    width: 200px;
+    border: 0;
+    
+    box-shadow: inset 0 12px 12px -12px rgb(193,176,134);
+}
+/* about section */
+
+/* --------Reviews------------ */
+#review {
+/*background: url(../../resources/images/interior3.jpg) center center no-repeat;*/
+    background-color: azure;
+	background-size: cover;
+    padding: 5px 0;
+    margin: 0 auto;
+	text-align: center;
+}
+
+.review-part-haead {
+	color: var(--blue);
+	
+	line-height: 41px;
+	/*margin:30px 0 10px;*/
+	font-family: 'Lato', sans-serif;
+	
+}
+
+.quote-right {
+	font-style: normal;
+	width: 68px;
+	height: 68px;
+	margin: 0 auto;
+	border: 2px solid #3da066;
+	border-radius: 50%;
+	display: block;
+	line-height: 68px;
+	text-align: center;
+	font-size: 27px;
+	color: #3da066;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+#review .item{
+    display: block;
+}
+/* --------Reviews------------ */
+
+
+.error_label {
+    color: #F44336;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.success_label {
+    color: #e99898;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .main_text_subtitle{
+        margin-top: 18em;
+    }
+
+    .book_now_btn{
+        margin-top: 25em;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .about-container{
+        width: 750px;
+    }
+}
