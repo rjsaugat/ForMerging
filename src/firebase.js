@@ -29,6 +29,8 @@ const firebaseMessages = firebaseDB.ref('messages');
 const firebaseGallery = firebaseDB.ref('gallery');
 const firebaseRooms = firebaseDB.ref('rooms');
 const firebaseServices = firebaseDB.ref('services');
+const firebaseAboutContent = firebaseDB.ref('aboutContent');
+const firebaseTariffs = firebaseDB.ref('tariffs');
 
 export {
     firebase,
@@ -37,5 +39,7 @@ export {
     firebaseMessages,
     firebaseGallery,
     firebaseRooms,
-    firebaseServices
+    firebaseServices,
+    firebaseAboutContent,
+    firebaseTariffs
 }

@@ -526,6 +526,13 @@ img.gallery-image-single{
     justify-content: center;
     align-items: center;
 }
+.add_service{
+    margin: 0 auto;
+}
+
+.service-card{
+    text-align: center;
+}
 /* admin services */
 
 /* services */

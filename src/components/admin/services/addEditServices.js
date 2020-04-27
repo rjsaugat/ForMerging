@@ -5,7 +5,7 @@ import FormField from "../../ui/formFields";
 import {validate} from '../../ui/misc';
 import { withRouter } from 'react-router-dom'
 
-import {firebaseServices, firebaseDB } from '../../../firebase';
+import {firebaseServices, firebaseDB, firebase } from '../../../firebase';
 import Fileuploader from '../../ui/fileUploader';
 
 class AddEditServices extends Component {
@@ -60,6 +60,23 @@ class AddEditServices extends Component {
         }
     }
 
+    updateFields = (service, serviceId, type, defaultImg) => {
+        const newFormData = {...this.state.formdata}
+        /* console.log(room)
+        console.log(newFormData) */
+        for(let key in newFormData){
+            newFormData[key].value = service[key];
+            newFormData[key].valid = true;
+        }
+        //as key and value are same
+        this.setState({
+            serviceId,
+            defaultImg,
+            formType: type,
+            formdata: newFormData
+        })
+    }
+
     componentDidMount(){
         const serviceId = this.props.match.params.id;
         if(!serviceId){
@@ -67,7 +84,25 @@ class AddEditServices extends Component {
                 formType : 'Add Service'
             })
         }else{
-
+            firebaseDB.ref(`services/${serviceId}`).once('value').then((snapshot) => {
+                const service = snapshot.val();
+                console.log(service)
+                let promise = new Promise((resolve, reject) => {
+                    firebase.storage().ref('services')
+                    .child(service.image).getDownloadURL()
+                    .then((url) => {
+                        service.url = url;
+                        resolve();
+                    }).catch( error => {
+                        reject(error);
+                    })
+                })
+                promise.then(()=>{
+                    this.updateFields(service, serviceId, 'Edit Service', service.url)
+                })
+            }).catch( e => {
+                console.log(e)
+            })
         }
     }
 
@@ -147,6 +182,15 @@ class AddEditServices extends Component {
                 formError: true
             })
         }
+    }
+
+    successForm = (message) => {
+        this.setState({
+            formSuccess: message
+        })
+        setTimeout(()=>{
+            this.setState({formSuccess: ''})
+        }, 2000)
     }
 
     render() {

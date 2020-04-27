@@ -150,9 +150,10 @@ class AdminGallery extends Component {
                                 </div>
                                 :null}
                                 <div className="admin_submit">
-                                    <button onClick={(event)=>this.submitForm(event)}>
+                                    <button className="btn btn-primary" onClick={(event)=>this.submitForm(event)}>
                                         Add Image
                                     </button>
+                                    <p>Add new photos by selecting from the browse button. The images will appear in gallery</p>
                                 </div>
                         </form>
                     </div>

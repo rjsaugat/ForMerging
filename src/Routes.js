@@ -19,6 +19,8 @@ import AdminRooms from './components/admin/rooms';
 import AddEditRooms from './components/admin/rooms/addEditRooms';
 import AdminServices from './components/admin/services';
 import AdminTariff from './components/admin/tariffs';
+import Tariffs from './components/admin/tariffs/Tariffs'
+import AdminAbout from './components/admin/about';
 
 import Dashboard from './components/admin/Dashboard';
 import AddEditServices from './components/admin/services/addEditServices';
@@ -29,14 +31,18 @@ const Routes = (props) => {
   return (
     <Layout>
       <Switch>
+        <PrivateRoutes {...props} path="/admin_services/add_service/:id" exact component={AddEditServices} />
         <PrivateRoutes {...props} path="/admin_services/add_service" exact component={AddEditServices} />
         <PrivateRoutes {...props} path="/admin_services" exact component={AdminServices} />
         <PrivateRoutes {...props} path="/admin_rooms/add_room" exact component={AddEditRooms} />
         <PrivateRoutes {...props} path="/admin_rooms/add_rooms/:id" exact component={AddEditRooms} />
         <PrivateRoutes {...props} path="/admin_rooms" exact component={AdminRooms} />
-        <PrivateRoutes {...props} path="/tariffs" exact component={AdminTariff} />
+        <PrivateRoutes {...props} path="/tariffs/add_tariff/:id" exact component={AdminTariff} />
+        <PrivateRoutes {...props} path="/tariffs/add_tariff" exact component={AdminTariff} />
+        <PrivateRoutes {...props} path="/tariffs" exact component={Tariffs} />
         <PrivateRoutes {...props} path="/admin_gallery" exact component={AdminGallery} />
         <PrivateRoutes {...props} path="/admin_messages" exact component={AdminMessages}/>
+        <PrivateRoutes {...props} path="/admin_about" exact component={AdminAbout}/>
         <PrivateRoutes {...props} path="/dashboard" exact component={Dashboard}/>
         <PublicRoutes {...props} restricted={true} path="/sign_in" exact component={Sign_In} />
         <PublicRoutes {...props} restricted={false} path="/gallery" exact component={Gallery} />

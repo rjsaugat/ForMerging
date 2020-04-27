@@ -73,7 +73,8 @@ class AddEditRooms extends Component {
                     name:'amenities_input',
                     type:'text',
                     label: 'List of available amenities',
-                    class:'form-control'
+                    class:'form-control',
+                    placeholder: 'Add amenities seperated by comma( , ) eg: AC, TV etc.'
                 },
                 validation:{
                     required: true
@@ -128,8 +129,6 @@ class AddEditRooms extends Component {
 
 
     componentDidMount(){
-        /* const roomId = this.props.match && this.props.match.params && this.props.match.params.id; */
-
         const roomId = this.props.match.params.id;
 
         if(!roomId){
@@ -140,13 +139,35 @@ class AddEditRooms extends Component {
             //edit room
             firebaseDB.ref(`rooms/${roomId}`).once('value').then((snapshot)=>{
                 const roomData = snapshot.val();
-                firebase.storage().ref('/rooms')
-                .child(roomData.image).getDownloadURL()
-                .then( url => {
-                    this.updateFields(roomData, roomId, 'Edit Room', url)
+                console.log(roomData)
+                let promise = new Promise((resolve, reject) => {
+                    firebase.storage().ref('/rooms')
+                    .child(roomData.image).getDownloadURL()
+                    .then( url => {
+                        roomData.url = url;
+                        resolve();
+                    }).catch(error => {
+                        reject(error)
+                    })
+                })
+                promise.then(()=>{
+                    console.log('update fields called')
+                    this.updateFields(roomData, roomId, 'Edit Room', roomData.url)
                 }) 
             })
         }
+    }
+
+    removingCode(){
+        const roomId = this.props.match.params.id;
+        firebaseDB.ref(`rooms/${roomId}`).once('value').then((snapshot)=>{
+            const roomData = snapshot.val();
+            firebase.storage().ref('/rooms')
+                .child(roomData.image).getDownloadURL()
+                .then( url => {
+                    this.updateFields(roomData, roomId, 'Edit Room', url)
+                })
+            })
     }
 
     updateForm(element, content=""){
@@ -299,7 +320,7 @@ class AddEditRooms extends Component {
                                 </div>
                                 :null}
                                 <div className="admin_submit">
-                                    <button onClick={(event)=>this.submitForm(event)}>
+                                    <button className="btn btn-primary" onClick={(event)=>this.submitForm(event)}>
                                         {this.state.formType}
                                     </button>
                                 </div>
