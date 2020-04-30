@@ -10,7 +10,7 @@ const RoomCard = ({room, index}) => {
                             <img src={room.url} alt="" />
                         <figcaption>
                             <h5 className="room-name">{room.name}</h5>
-                            <p>{room.description.substr(0,50) + '... Click to find more'}</p>
+                            <p>{room.description.substr(0,50) + '... Learn More'}</p>
                         </figcaption>
                     </figure>
                 </div>

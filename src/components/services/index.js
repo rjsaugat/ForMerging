@@ -86,9 +86,9 @@ class Services extends Component {
             <div className="services-container">
                 <div className="container">
                     <div className="row services-row">
-                        <h2>Our Services</h2>
+                        <h2 className="second-heading">Our Services</h2>
                         <hr class="service-line"/>
-                        <p class="services-pg">We offer exceptional services and make sure you will leave the hotel in your best mood and wanting more of the same.</p>
+                        <h5 className="third-heading">"We offer exceptional services and make sure you will leave the hotel in your best mood and wanting more of the same"</h5>
                         {
                             !this.state.isLoading ? 
                                 this.addServices()

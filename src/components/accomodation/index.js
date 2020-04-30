@@ -43,8 +43,9 @@ class Accomodation extends Component {
         console.log(this.state)
         return (
             <div className="accomodation-container container">
-                <div className="heading">
-                    <h3>Accomodation</h3>
+                <div className="accomodation-heading">
+                    <h2 className="second-heading">Accomodation</h2>
+                    <hr class="service-line"/>
                 </div>
                 <div className="gallery-grids row">
                     {

@@ -14,7 +14,8 @@ class Home extends Component {
                 <About/>
                 <Reviews />
                 <h2 className="contact-header">Let's Connect</h2>
-                <hr className="abt-line"></hr>
+                <hr className="connect-line"></hr>
+                <h5 className="third-heading">"Feel free to text us"</h5>
                 <Contact />
                 {/* </React.Fragment>  */} 
             </div>

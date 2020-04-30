@@ -65,9 +65,9 @@ class Reviews extends Component {
                     
                     <div className="row">
                         <div className="col-lg-12">
-                            <p className="review-part-haead">See what our guests say</p>
+                            <h2 className="review-part-head">See what our guests say</h2>
                         </div>
-                        <div id="myCarousel" class="carousel" style={{position:'relative', height: '600px', width:'100%'}}>
+                        <div id="myCarousel" class="carousel" style={{position:'relative', height: '400px', width:'100%'}}>
                             <div className="reviews-slider" style={{overflow: 'hidden'}}>
                                 <Slider {...settings} >
                                     {this.state.fb_reviews_object_array.map((item, i) => (

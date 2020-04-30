@@ -1,9 +1,9 @@
 :root {
-    --yellow: #c1b086 !important;
-    --green: #3da066 !important;
+    --yellow: #7DBA28 !important;
+    --green: #378B34 !important;
     --white: #fffaff !important;
-    --blue: #0066aa !important;/*Heading-text color*/
-    --brown: #7c3f4b !important;
+    --blue: #0C749C !important; /*Heading-text color*/
+    --brown: #6B1305 !important;
     --jumbotron-padding-y: 3rem;
 }
 
@@ -17,12 +17,68 @@ body{
     font-family: 'Lato', sans-serif !important;
 }
 
-h2{
+
+h2, .second-heading{
     font-family: 'Dancing Script', cursive !important;
-    font-weight: 900;
+    font-weight: 1500;
+    color:#0C749C;
+    padding-top: 30px;
+    }
+.third-heading{
+    font-family: 'Lato', sans-serif !important;
+    color:#6B1305;
+    text-align: center;
+    padding: 0 0 20px;
 }
 
-/* Bootstap jumbotron css */
+.connect-line {
+    height: 12px;
+    width: 190px;
+    box-shadow: inset 0 10px 10px -4px #6B1305;}
+
+
+/*====================================================================================================
+                                        ABOUT-SECTION
+====================================================================================================*/
+
+.content-about{
+    line-height: 24px;
+    font-family: lato;
+    font-Size: 14px;
+    font-Weight: normal;
+
+}
+
+
+.about-container {
+    padding: 30px 0;
+}
+
+.about-heading {
+    color: var(--blue);
+    font-weight: 800;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.abt-line {
+    height: 15px;
+    width: 350px;
+    border: 0;
+    box-shadow: inset 0 10px 10px -4px #6B1305;
+}
+
+/*====================================================================================================
+                                        ABOUT-SECTION
+====================================================================================================*/
+
+
+
+
+
+/*====================================================================================================
+                                        Bootstap jumbotron css
+====================================================================================================*/
 .jumbotron {
     padding-top: var(--jumbotron-padding-y);
     padding-bottom: var(--jumbotron-padding-y);
@@ -49,20 +105,12 @@ h2{
     max-width: 40rem;
 }
 
-footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
 
-footer p {
-    margin-bottom: .25rem;
-}
 
-.box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
 
-/* Bootstap jumbotron css */
+/*====================================================================================================
+                                        Bootstap jumbotron css
+====================================================================================================*/
 
 
 .error_label {
@@ -84,17 +132,17 @@ footer p {
 
 
 
-/*====================
-        CARROUSEL
-======================*/
+/*====================================================================================================
+                                        CAROUSEL-SECTION
+====================================================================================================*/
 
 
-.carrousel_wrapper {
+.carousel_wrapper {
     height: 700px;
     overflow: hidden;
 }
 
-.carrousel_image {
+.carousel_image {
     background-size: cover !important;
 }
 
@@ -117,7 +165,7 @@ footer p {
     font-size: 50px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #7c3f4b;
+    color: #6B1305;
 }
 
 .main_text_subtitle {
@@ -142,6 +190,7 @@ footer p {
 .book_now_btn {
     font-family: 'lato', sans-serif;
     margin-top: 15em;
+    padding-top: 50px;
 }
 
 .book_now_btn button {
@@ -149,9 +198,62 @@ footer p {
     color: var(--white);
 }
 
+/*====================================================================================================
+                                        CAROUSEL-SECTION
+====================================================================================================*/
+
+
+
+/*====================================================================================================
+                                        CONTACT-SECTION
+====================================================================================================*/
+.contact {
+    height: 700px;
+    margin: 5px;
+    padding: 30px 0;
+
+}
+
+.contact-header {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 800;
+    color: var(--blue);
+}
+/*====================================================================================================
+                                        CONTACT-SECTION
+====================================================================================================*/
+
+
+
+
+/*====================================================================================================
+                                        FOOTER-SECTION
+====================================================================================================*/
+
+
+
+
+footer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+footer .footer-address {
+    text-align: center;
+    }
+footer h3{
+    color: #6B1305;
+    font-weight: bold;
+}
+footer ul{
+    list-style-type: none;
+}
+
+
+
 footer.footer-component {
-    display: flex;
-    background-color: #bcbdc0;
+    
+    background-color: #252b30;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -159,7 +261,9 @@ footer.footer-component {
 }
 
 footer.footer-component .row {
+    display: flex;
     width: 100%;
+    
 }
 
 .footer-component .middle,
@@ -185,9 +289,9 @@ footer.footer-component .row {
 } */
 
 .footer-address p {
-    margin: 0;
+    margin: 0 auto;
     font-size: .9em;
-    line-height: 1.8em;
+    
 }
 
 .footer-address p span {
@@ -200,8 +304,6 @@ footer.footer-component .row {
 }
 
 .social-link {
-    text-align: center;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,64 +312,48 @@ footer.footer-component .row {
 }
 
 .social-link li {
-    float: left;
+    float: center;
     margin-right: 8px;
-    padding: 5px;
+    padding: 10px 5px 10px;
+}
+.social-link img{
+    height: 40px;
+    width: 40px;
 }
 
 .footer_newsletter {
     text-align: center;
 }
 
-/* ----------Contact------------- */
-.contact {
-    height: 700px;
-    margin: 5px;
-    padding: 5px;
-
-}
-
-.contact-header {
-    text-align: center;
-    padding: 50px;
-    margin: 0 auto;
-    font-weight: 800;
-    color: var(--blue);
-}
-/* ----------Contact------------- */
-
-/* about section */
-.about-container {
-    padding: 50px 0;
-}
-
-.about-heading {
-    color: var(--blue);
-    font-weight: 800;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.abt-line {
-    height: 15px;
-    width: 200px;
-    border: 0;
-    box-shadow: inset 0 12px 12px -12px rgb(193,176,134);
-}
-
-/* about section */
-
-/* --------Reviews------------ */
-#review {
-    /* background: url(../../resources/images/interior3.jpg) center center no-repeat; */
-    background-size: cover;
-    background-color: azure;
+footer .right .booking-links li{
     padding: 5px 0;
+}
+
+footer .sub-footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/*====================================================================================================
+                                        FOOTER-SECTION
+====================================================================================================*/
+
+
+
+/*====================================================================================================
+                                        REVIEW-SECTION
+====================================================================================================*/
+
+#review {
+    background: url(../../resources/images/Dhulikhel-Boutique-nightlife.jpg) center center no-repeat; 
+    background-size: cover;
+    padding: 30px 0;
     margin: 0 auto;
     text-align: center;
 }
 
-.review-part-haead {
+.review-part-head {
     color: var(--blue);
     line-height: 41px;
     /*margin:30px 0 10px;*/
@@ -279,13 +365,13 @@ footer.footer-component .row {
     width: 68px;
     height: 68px;
     margin: 0 auto;
-    border: 2px solid #3da066;
+    border: 2px solid #378B34;
     border-radius: 50%;
     display: block;
     line-height: 68px;
     text-align: center;
     font-size: 27px;
-    color: #3da066;
+    color: #378B34;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -296,17 +382,21 @@ footer.footer-component .row {
     display: block;
 }
 
-/* --------Reviews------------ */
+/*====================================================================================================
+                                        REVIEW-SECTION
+====================================================================================================*/
 
 
-/* Sign In */
+/*====================================================================================================
+                                        SIGN_IN -SECTION
+====================================================================================================*/
 .signin_wrapper {
     margin: 100px;
 }
 
 .signin_wrapper {
     margin-top: 96px;
-    padding: 20px;
+    padding: 30px 0;
     min-height: 70VH;
     text-align: center;
 }
@@ -324,21 +414,25 @@ footer.footer-component .row {
     padding: 10px;
 }
 
-.signin_wrapper h2 {
-    font-family: 'Righteous', cursive;
+.signin_wrapper h1 {
+    font-family: 'Dancing Script', cursive;
     color: var(--green);
     font-size: 50px;
     margin-bottom: 25px;
 }
 
 
-/* Sign In */
+/*====================================================================================================
+                                        SIGN_IN -SECTION
+====================================================================================================*/
 
 
-/* Dashboard */
+/*====================================================================================================
+                                        DASHBOARD-SECTION
+====================================================================================================*/
 .user_dashboard {
     font-size: 60px;
-    font-family: 'Righteous', cursive;
+    font-family: 'Dancing Script', cursive;
     color: var(--green);
     text-align: center;
     margin-top: 200px;
@@ -375,16 +469,24 @@ footer.footer-component .row {
     color: #4CAF50;
 }
 
-.admin_container h2 {
+.admin_container h1 {
     margin: 0px 0px 50px 0px;
     border-bottom: 1px solid #dbdbdb;
     color: #414141;
     font-size: 40px;
 }
 
-/* Dashboard */
+/*====================================================================================================
+                                        DASHBOARD-SECTION
+====================================================================================================*/
 
-/* admin messages */
+
+
+/*====================================================================================================
+                                        ADMIN_MESSAGE -SECTION
+====================================================================================================*/
+
+
 .messages-container {
     align-items: center;
     justify-content: center;
@@ -405,9 +507,13 @@ footer.footer-component .row {
     padding: 0 15px;
 }
 
-/* admin messages */
+/*====================================================================================================
+                                        ADMIN_MESSAGE -SECTION
+====================================================================================================*/
 
-/* admin rooms */
+/*====================================================================================================
+                                        ADMIN_ROOM -SECTION
+====================================================================================================*/
 
 .add_room_form{
     width: 100%;
@@ -431,14 +537,21 @@ footer.footer-component .row {
     border: 1px solid white;
     padding: 10px;
 }
-/* admin rooms */
+/*====================================================================================================
+                                        ADMIN_ROOM -SECTION
+====================================================================================================*/
 
-/* galery css */
+
+/*====================================================================================================
+                                        GALLERY-SECTION
+====================================================================================================*/
+
+
 .gallery-line {
 	height: 12px;
-	width: 180px;
-	border: 0;
-	box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+	width: 120px;
+    border: 0;
+    box-shadow: inset 0 10px 10px -4px #6B1305;;
 }
 
 .gallery-container{
@@ -472,12 +585,12 @@ footer.footer-component .row {
 .Portfolio-nav li {
 	display: inline-block;
 	padding: 10px 22px;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 20px;
-	color: #435ce8;
+	color: #0C749C;
 	border-radius: 4px;
 	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Lato', sans-serif;
 	background: #f7f7f7;
 	margin: 10px;
 	transition: all 0.3s ease-in-out;
@@ -486,8 +599,8 @@ footer.footer-component .row {
 }
 
 .Portfolio-nav li:hover {
-	background: #36b83e;
-	color: #e83935;
+	background: #378B34 ;
+	color: #6B1305 ;
 	text-decoration: none;
 }
 
@@ -496,7 +609,7 @@ li.option img{
 }
 
 li.option.active{
-    background: #36b83e;
+    background: #378B34  ;
     color: #fff;
     text-decoration: none;
 }
@@ -518,17 +631,30 @@ img.gallery-image-single{
     margin: 0 auto;
     padding: 15px;
 }
-/* galery css */
 
-/* admin services */
+/*====================================================================================================
+                                        GALLERY-SECTION
+====================================================================================================*/
+
+
+/*====================================================================================================
+                                        ADMIN_SERIVICES-SECTION
+====================================================================================================*/
+
 .admin_services{
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-/* admin services */
+/*====================================================================================================
+                                        ADMIN_SERVICES -SECTION
+====================================================================================================*/
 
-/* services */
+
+
+/*====================================================================================================
+                                        SERVICES -SECTION
+====================================================================================================*/
 .services-container{
     margin-top: 100px;
 }
@@ -539,12 +665,15 @@ img.gallery-image-single{
     align-items: center;
     text-align: center;
 }
+.services-row h1{
+color: #0C749C;
+}
 
 .service-line {
 	height: 12px;
-	width: 280px;
+	width: 190px;
 	border: 0;
-	box-shadow: inset 0 12px 12px -12px rgba(209, 140, 30, 0.77);
+	box-shadow: inset 0 10px 10px -4px #6B1305;
 }
 
 .services-pg {
@@ -565,23 +694,37 @@ img.gallery-image-single{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .service-single-item .item img{
     max-width: 100%;
     vertical-align: middle;
+    
 }
-/* services */
 
-/* accomodation */
+/*====================================================================================================
+                                        SERVICES -SECTION
+====================================================================================================*/
+
+
+
+/*====================================================================================================
+                                        ACCOMODATION-SECTION
+====================================================================================================*/
+
 .accomodation-container{
     margin-top: 100px;
 }
 
 .accomodation-container .row{
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+.accomodation-heading{
+    text-align:center ;
 }
 
 figure.effect-apollo img {
@@ -597,8 +740,9 @@ figure.effect-apollo figcaption::before {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background: rgba(255,255,255,0.5);
+    height: 100%;
+    
+	background: #378B34;
 	content: '';
 	-webkit-transition: -webkit-transform 0.6s;
 	transition: transform 0.6s;
@@ -621,7 +765,7 @@ figure.effect-apollo p {
     transition: opacity 0.35s;
 }
 
-figure.effect-apollo h2 {
+figure.effect-apollo h1 {
 	text-align: left;
 }
 
@@ -650,21 +794,29 @@ figure.effect-apollo:hover p {
 	text-align: center;
 }
 
-/* Common style */
+
+
+
+/*====================================================================================================
+                                       COMMAN STYLE-SECTION
+====================================================================================================*/
+
 .grid figure {
 	position: relative;	
 	overflow: hidden;
 	margin: 10px 0;
 	height: auto;
 	text-align: center;
-	cursor: pointer;
+    cursor: pointer;
+    
 }
 
 .grid figure img {
 	position: relative;
 	display: block;
 	width: 100%;
-	opacity: 0.8;
+    opacity: 0.8;
+    
 }
 
 .grid figure figcaption {
@@ -708,11 +860,11 @@ figure.effect-apollo:hover p {
     font-weight: 600;
 }
 
-.grid figure h2 span {
+.grid figure h1 span {
 	font-weight: 800;
 }
 
-.grid figure h2,
+.grid figure h1,
 .grid figure p {
 	margin: 0;
 }
@@ -739,7 +891,10 @@ figure.effect-apollo:hover p {
     margin: 0 auto;
     text-align: center;
 }
-/* accomodation */
+
+/*====================================================================================================
+                                        ACCOMODATION-SECTION
+====================================================================================================*/
 
 
 @media only screen and (max-width: 768px) {
@@ -762,5 +917,5 @@ figure.effect-apollo:hover p {
     .service-single-item .item{
         display: block;
         padding: 10px;
-    }
+           }
 }

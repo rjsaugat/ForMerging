@@ -138,8 +138,7 @@ class MessageUs extends Component {
             <Roll right>
                 <div className="message-us" style={{textAlign: 'center'}}>
                     <form onSubmit={(event) => this.submitForm(event)} className="message-us-form">
-                        <p>Feel free to text us</p>
-                        <FormField 
+                            <FormField 
                             id={'name'}
                             formData = {this.state.formdata.name}
                             change={(element)=>this.updateForm(element)}

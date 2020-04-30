@@ -17,7 +17,7 @@ class NewsLetter extends Component {
                 config: {
                     name: 'email_input',
                     type: 'email',
-                    placeholder: 'Enter your email'
+                    placeholder: 'Enter Your Email'
                 },
                 validation:{
                     required: true,

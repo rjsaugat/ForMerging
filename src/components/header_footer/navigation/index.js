@@ -38,10 +38,10 @@ class Navigation extends Component {
             <AppBar 
                 position="fixed"
                 style={{
-                    backgroundColor: this.state.headerTransparent ? "transparent" : "#f7f7ff",
+                    backgroundColor: this.state.headerTransparent ? "transparent" : "#252b30",
                     boxShadow:"none",
-                    padding: '10px 0',
-                    borderColor: '2px solid #70798c'
+                    padding: '0',
+                    borderColor: '2px solid #70798c'/*dont know why used*/
                 }}
             >
                 <Toolbar style={{
@@ -59,9 +59,9 @@ class Navigation extends Component {
                                 <HotelLogo
                                     link={true}
                                     linkTo="/"
-                                    width ="100px"
-                                    height="100px" 
-                                    bckSize= "100px"
+                                    width ="80px"
+                                    height="80px" 
+                                    bckSize= "80px"
                                 />
                             </div>
                         </div>
