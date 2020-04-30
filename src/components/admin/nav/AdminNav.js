@@ -11,8 +11,16 @@ const AdminNav = () => {
             linkTo: '/admin_messages'
         },
         {
+            title: 'Add Photos',
+            linkTo: '/admin_gallery'
+        },
+        {
             title: 'Tariffs',
             linkTo: '/tariffs'
+        },
+        {
+            title: 'Add Tariffs',
+            linkTo: '/tariffs/add_tariff'
         },
         {
             title: 'Rooms',
@@ -23,12 +31,12 @@ const AdminNav = () => {
             linkTo: '/admin_rooms/add_room'
         },
         {
-            title: 'Add Photos',
-            linkTo: '/admin_gallery'
-        },
-        {
             title: 'Services',
             linkTo: '/admin_services'
+        },
+        {
+            title: 'About Content',
+            linkTo: '/admin_about'
         }
     ]
 

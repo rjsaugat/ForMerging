@@ -3,7 +3,7 @@ import React from 'react';
 const SingleRoom = ({room}) => {
 
     const splitAmenities = (amenities) => {
-        let splitCharacter = '-'
+        let splitCharacter = ','
         let amenitiesArray = amenities.split(splitCharacter);
         return amenitiesArray.map((amenity, i) => (
             <li key={i} className="amenities-item">{amenity}</li>

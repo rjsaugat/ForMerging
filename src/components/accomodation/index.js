@@ -46,6 +46,7 @@ class Accomodation extends Component {
                 <div className="accomodation-heading">
                     <h2 className="second-heading">Accomodation</h2>
                     <hr class="service-line"/>
+                    <p className="accomodation-subtitle"></p>
                 </div>
                 <div className="gallery-grids row">
                     {
