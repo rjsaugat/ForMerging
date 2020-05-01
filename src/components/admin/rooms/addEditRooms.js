@@ -139,7 +139,6 @@ class AddEditRooms extends Component {
             //edit room
             firebaseDB.ref(`rooms/${roomId}`).once('value').then((snapshot)=>{
                 const roomData = snapshot.val();
-                console.log(roomData)
                 let promise = new Promise((resolve, reject) => {
                     firebase.storage().ref('/rooms')
                     .child(roomData.image).getDownloadURL()
@@ -151,7 +150,6 @@ class AddEditRooms extends Component {
                     })
                 })
                 promise.then(()=>{
-                    console.log('update fields called')
                     this.updateFields(roomData, roomId, 'Edit Room', roomData.url)
                 }) 
             })
@@ -189,7 +187,6 @@ class AddEditRooms extends Component {
         newElement.validationMessage = validData[1]
 
         newFormData[element.id] = newElement;
-        console.log(newFormData)
         
         
         this.setState({

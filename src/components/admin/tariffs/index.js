@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FormField from '../../ui/formFields';
 import {withRouter} from 'react-router-dom';
 import AdminLayout from '../../../HOC/AdminLayout'
-import { firebase, firebaseDB, firebaseTariffs } from '../../../firebase';
+import { firebaseDB, firebaseTariffs } from '../../../firebase';
 import { validate } from "../../ui/misc";
 
 class AdminTariff extends Component {
@@ -176,7 +176,6 @@ class AdminTariff extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <AdminLayout>
                 <div className="container tariff-container">

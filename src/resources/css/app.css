@@ -936,22 +936,35 @@ figure.effect-apollo:hover p {
 }
 
 .single-room-figure{
-    width: 500px;
-    height: 500px;
+    max-width: 100%;
     display: inline-flex;
 }
 
 .single-room-row .col-md-7{
-    margin: 0 auto;
+    margin: auto auto;
     text-align: center;
 }
 
 /*====================================================================================================
                                         ACCOMODATION-SECTION
 ====================================================================================================*/
-
+.error_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 40px;
+    padding: 15px;
+    color: var(--blue);
+}
 
 @media only screen and (max-width: 768px) {
+    .error_page{
+        font-size: 25px;
+    }
     .main_text_subtitle {
         margin-top: 18em;
     }

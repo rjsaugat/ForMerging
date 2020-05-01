@@ -74,7 +74,6 @@ class MessageUs extends Component {
         newElement.validationMessage = validData[1]
 
         newFormData[element.id] = newElement;
-        console.log(newFormData)
         
         
         this.setState({
@@ -159,8 +158,7 @@ class MessageUs extends Component {
                         }
                         <div className="success_label">{this.state.formSuccess}</div>
                         <Button 
-                            variant="contained" 
-                            color="green" 
+                            variant="contained"  
                             size="large"
                             onClick={(event) => this.submitForm(event)}
                         >Send Message</Button>

@@ -23,7 +23,6 @@ class Tariff extends Component {
     componentDidMount(){
         firebaseTariffs.once('value').then((snapshot) => {
             const tariffs = firebaseLooper(snapshot);
-            console.log(tariffs);
             this.setState({
                 rows: tariffs
             })

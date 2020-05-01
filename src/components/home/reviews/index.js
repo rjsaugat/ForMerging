@@ -79,9 +79,9 @@ class Reviews extends Component {
                                                 height={item.height}
                                                 style={{border:'none',overflow:'hidden'}} 
                                                 scrolling="no" 
-                                                frameborder="0" 
-                                                allowTransparency="true" 
-                                                allow="encrypted-media">
+                                                frameBorder="0" 
+                                                /* allowTransparency="true"  */
+                                            >
                                             </iframe> 
                                         </div>
                                     ))}

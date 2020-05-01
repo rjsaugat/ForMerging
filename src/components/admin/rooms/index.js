@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AdminLayout from '../../../HOC/AdminLayout';
 import { Link } from 'react-router-dom';
-import { firebase, firebaseDB, firebaseRooms } from '../../../firebase';
+import { firebase, firebaseRooms } from '../../../firebase';
 import {firebaseLooper, reverseArray} from '../../ui/misc';
 
 

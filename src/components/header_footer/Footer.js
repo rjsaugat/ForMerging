@@ -7,6 +7,7 @@ import Booking from '../../resources/images/booking.png';
 import Expedia from '../../resources/images/expedia.png';
 import FACEBOOK from '../../resources/images/facebook.png';
 import INSTAGRAM from '../../resources/images/instagram.png';
+import Chat from '../Chat'
 
 
 
@@ -86,11 +87,12 @@ const Footer = () => {
                     
                 </div>
             </div>
-            <div class="sub-footer">
-             <div class="container">   
+            <div className="sub-footer">
+             <div className="container">   
                      <p> © 2020  Dhulikhel Boutique Hotel - All Rights Reserved </p>
              </div>
         </div>
+        <Chat />
         </footer>
        
          

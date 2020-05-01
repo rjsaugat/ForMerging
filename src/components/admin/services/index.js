@@ -18,7 +18,7 @@ class AdminServices extends Component {
                 isLoading: false,
                 services
             })
-        })
+        }).catch(e => console.log(e))
     }
 
     addServices(service, i){
@@ -45,7 +45,6 @@ class AdminServices extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <AdminLayout>
                 <div className="container">

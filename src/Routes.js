@@ -21,6 +21,7 @@ import AdminServices from './components/admin/services';
 import AdminTariff from './components/admin/tariffs';
 import Tariffs from './components/admin/tariffs/Tariffs'
 import AdminAbout from './components/admin/about';
+import NotFound from './components/ui/not_found';
 
 import Dashboard from './components/admin/Dashboard';
 import AddEditServices from './components/admin/services/addEditServices';
@@ -50,6 +51,8 @@ const Routes = (props) => {
         <PublicRoutes {...props} restricted={false} path="/accomodation" exact component={Accomodation} />
         <PublicRoutes {...props} restricted={false} path="/services" exact component={Services} />
         <PublicRoutes {...props} restricted={false} path="/" exact component={Home} />
+        <PublicRoutes {...props} restricted={false} component={NotFound} />
+
         
       </Switch>
     </Layout>

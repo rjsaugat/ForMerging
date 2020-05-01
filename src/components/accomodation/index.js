@@ -35,12 +35,13 @@ class Accomodation extends Component {
                     isLoading: false,
                     rooms
                 })
+            }).catch(e => {
+                console.log('erroe: ', e)
             })
         })
     }
 
     render() {
-        console.log(this.state)
         return (
             <div className="accomodation-container container">
                 <div className="accomodation-heading">

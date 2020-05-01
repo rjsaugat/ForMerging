@@ -20,13 +20,13 @@ const SingleRoom = ({room}) => {
                     </figure>
                 </div>
                 <div className="col-md-5">
-                    <p>{room.name}</p>
-                    <p><strong>Description</strong>{room.description}</p>
-                    <ul><strong>Amenities</strong>
+                    <p><strong>{room.name}</strong></p>
+                    <p><strong>Description:</strong><br />{room.description}</p>
+                    <ul><strong>Amenities:</strong><br />
                         {splitAmenities(room.amenities)}
                     </ul>
-                    <p><strong>Max no of guests in this room</strong>{room.max_guests}</p>
-                    <p><strong>*Price</strong>{room.price}</p>
+                    <p><strong>Max no of guests in this room </strong>{room.max_guests}</p>
+                    <p><strong>*Price </strong>{room.price}</p>
                 </div>
             </div>
         </div>

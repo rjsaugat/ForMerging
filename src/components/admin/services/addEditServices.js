@@ -86,7 +86,6 @@ class AddEditServices extends Component {
         }else{
             firebaseDB.ref(`services/${serviceId}`).once('value').then((snapshot) => {
                 const service = snapshot.val();
-                console.log(service)
                 let promise = new Promise((resolve, reject) => {
                     firebase.storage().ref('services')
                     .child(service.image).getDownloadURL()
@@ -139,9 +138,6 @@ class AddEditServices extends Component {
         newElement.validationMessage = validData[1]
 
         newFormData[element.id] = newElement;
-        console.log(newFormData)
-        
-        
         this.setState({
             formError: false,
             formdata: newFormData

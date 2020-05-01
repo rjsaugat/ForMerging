@@ -85,7 +85,6 @@ class AdminAbout extends Component {
     componentDidMount(){
         firebaseAboutContent.once('value').then((snapshot) => {
             const contentObject = snapshot.val();
-            console.log(snapshot.val())
             this.updateFields(contentObject)
         }).catch( e => {
             console.log(e)
@@ -120,8 +119,6 @@ class AdminAbout extends Component {
         newElement.validationMessage = validData[1]
 
         newFormData[element.id] = newElement;
-        console.log(newFormData)
-        
         this.setState({
             formError: false,
             formdata: newFormData
@@ -149,7 +146,6 @@ class AdminAbout extends Component {
                 this.setState({formError: true})
                 console.log('erroe', e)
             })
-            console.log(dataToSubmit)
         }else{
             this.setState({
                 formError: true

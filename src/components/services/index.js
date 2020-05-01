@@ -12,45 +12,6 @@ class Services extends Component {
         services: []
     }
 
-    addServices(){
-        
-        if(this.state.services){
-            console.log('add services called')
-            this.state.services.map((service, i) => {
-                
-                console.log(service)
-                if(i % 2 === 0){
-                    return (<div className="white-bg" key={i}>
-                                <div className="item">
-                                    <figure className="col-lg-5 col-sm-4">
-                                        <img  src={service.url} alt={service.name}/>
-                                    </figure>
-                                    <div className="featured-box-col2 delay-04s">
-                                        <h3 className="carousel-h3">{service.name}</h3>
-                                        <p>{service.description} </p>
-                                    </div>    
-                                </div>
-                            </div>
-                        )
-                }else{
-                    return (<div className="white-bg" key={i}>
-                            <div className="item">
-                                <div className="featured-box-col2 delay-04s">
-                                    <h3 className="carousel-h3">{service.name}</h3>
-                                    <p>{service.description} </p>
-                                </div>    
-                                <figure className="col-lg-5 col-sm-4">
-                                    <img  src={service.url} alt={service.name}/>
-                                </figure>
-                            </div>
-                        </div>
-                    )
-                }
-            })
-            
-        }
-    }
-
     componentDidMount(){
         firebaseServices.once('value').then((snapshot) => {
             const services = firebaseLooper(snapshot);
@@ -89,11 +50,6 @@ class Services extends Component {
                         <h2 className="second-heading">Our Services</h2>
                         <hr class="service-line"/>
                         <h5 className="third-heading">"We offer exceptional services and make sure you will leave the hotel in your best mood and wanting more of the same"</h5>
-                        {
-                            !this.state.isLoading ? 
-                                this.addServices()
-                            :<CircularProgress />
-                        }
                         {
                             !this.state.isLoading ? 
                             this.state.services.map((service, i) => {

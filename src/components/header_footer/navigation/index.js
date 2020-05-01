@@ -50,7 +50,7 @@ class Navigation extends Component {
                         alignItems: 'center'
                     }}>
                     <Typography
-                        variant="title"
+                        /* variant="title" */
                         color="inherit"
                         className=""
                     >

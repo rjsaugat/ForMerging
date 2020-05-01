@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Zoom} from 'react-reveal';
 import FormField from '../../ui/formFields';
 import {validate} from '../../ui/misc';
-import Button from '@material-ui/core/Button';
 import { firebasePromotions } from '../../../firebase';
 
 class NewsLetter extends Component {

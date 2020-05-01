@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import AdminLayout from '../../../HOC/AdminLayout'
-import { firebase, firebaseDB, firebaseTariffs } from '../../../firebase';
+import { firebaseTariffs } from '../../../firebase';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -10,7 +10,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
-import { reverseArray, firebaseLooper } from '../../ui/misc';
+import { firebaseLooper } from '../../ui/misc';
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 
@@ -23,7 +23,6 @@ class Tariffs extends Component {
     componentDidMount(){
         firebaseTariffs.once('value').then((snapshot) => {
             const tariffs = firebaseLooper(snapshot);
-            console.log(tariffs);
             this.setState({
                 rows: tariffs
             })

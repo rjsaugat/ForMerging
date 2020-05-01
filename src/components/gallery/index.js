@@ -25,6 +25,9 @@ class Gallery extends Component {
                         .then( url => {
                             gallery[key].url = url
                             resolve();
+                        }).catch(e => {
+                            console.log(e)
+                            reject(e);
                         })
                     })
                 )
@@ -35,7 +38,7 @@ class Gallery extends Component {
                     gallery: gallery,
                     filteredGallery: gallery
                 })
-            })
+            }).catch(e => console.log(e))
         }).catch((e)=>{
             console.log(e)
         })
@@ -66,6 +69,7 @@ class Gallery extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <div className="gallery-container">
                 <div className="container">

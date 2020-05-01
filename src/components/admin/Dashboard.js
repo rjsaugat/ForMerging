@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
         <AdminLayout>
             <div className="user_dashboard">
-                This is a dashboard
+                Welcome to admin panel. You will be able to change most of the contents from the left sidebar.
             </div>
         </AdminLayout>
     );

@@ -40,12 +40,11 @@ class SingleAccomodation extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div className="container single-room-container">
                 {
                     this.state.isLoading ? 
-                        <CircularProgress />
+                        <div style={{textAlign:'center'}}><CircularProgress /></div>
                     : <SingleRoom room={this.state.room}/>
                 }
                 <Tariff />

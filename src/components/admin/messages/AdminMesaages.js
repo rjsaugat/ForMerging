@@ -12,7 +12,6 @@ class AdminMesaages extends Component {
     }
 
     getMessages(){
-        console.log('get Messages Called',firebaseMessages)
         firebaseMessages.once('value').then((snapshot) => {
             const messages = firebaseLooper(snapshot);
             this.setState({
@@ -24,13 +23,14 @@ class AdminMesaages extends Component {
     }
 
     componentDidMount(){
-        firebaseMessages.once('value').then((snapshot) => {
+        firebaseMessages.once('value')
+        .then((snapshot) => {
             const messages = firebaseLooper(snapshot);
             this.setState({
                 isLoading: false,
                 messages: reverseArray(messages)
             })
-        })
+        }).catch(e => console.log(e))
     }
 
 
