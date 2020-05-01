@@ -129,7 +129,8 @@ class NewsLetter extends Component {
                                 :null
                             }
                             <div className="success_label">{this.state.formSuccess}</div>
-                            <Button variant="outlined" color="primary" onClick={(event) => this.submitForm(event)}>Enroll</Button>
+                            {/* <Button variant="contained" color="primary" onClick={(event) => this.submitForm(event)}>Enroll</Button> */}
+                            <button className="btn nav-btn">Enroll</button> 
                         </div>
                     </form>
                 </div>

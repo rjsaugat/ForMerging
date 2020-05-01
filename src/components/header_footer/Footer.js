@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
                 <div className="right col-md">
                     <div className="connect-div">
-                        <p className="connectwithus">Connect With US:</p>
+                        
                         <div className="row connect-row">
                            
                                 <div className="booking-sites">

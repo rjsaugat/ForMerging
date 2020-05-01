@@ -189,9 +189,9 @@ h2, .second-heading{
     position: absolute;
     font-family: 'Dancing Script', cursivef !important;
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 900;
     letter-spacing: 1px;
-    color: #6B1305;
+    color: #0C749C;
 }
 
 .main_text_subtitle {
@@ -208,8 +208,6 @@ h2, .second-heading{
 
 .main_text .wrapper {
     text-align: center;
-    color: #fff;
-    font-size: 40px;
     text-transform: uppercase;
 }
 
@@ -366,9 +364,7 @@ footer .sub-footer{
     width: 100%;
     text-align: center;
 }
-.connectwithus{
-    text-align: center;
-}
+
 
 /*====================================================================================================
                                         FOOTER-SECTION
@@ -386,16 +382,21 @@ footer .sub-footer{
     padding: 30px 0;
     margin: 0 auto;
     text-align: center;
+    
 }
 
 .review-part-head {
+    padding: 5px;
     width: 100%;
     color: var(--blue);
-    line-height: 41px;
+    line-height: 35px;
     /*margin:30px 0 10px;*/
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     font-family: 'lato',sans-serif;
-    background: rgba(0, 0, 0, 0.4);
+    background: #c1b086;
+    
+  
 }
 
 .quote-right {
@@ -935,7 +936,8 @@ figure.effect-apollo:hover p {
 }
 
 .single-room-figure{
-    max-width: 100%;
+    width: 500px;
+    height: 500px;
     display: inline-flex;
 }
 
